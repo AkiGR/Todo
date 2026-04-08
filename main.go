@@ -1,13 +1,19 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	http.HandleFunc("/greet", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "Hello")
+	r := gin.Default()
+
+	r.GET("/greet", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Hello, World!",
+		})
 	})
-	http.ListenAndServe(":8080", nil)
+
+	r.Run(":8080")
 }
