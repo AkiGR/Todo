@@ -8,5 +8,3 @@ This project is a simple Todo application built with Go. It allows users to mana
 ![Screenshot 2](img/2.png)
 ![Screenshot 3](img/3.png)
 ![Screenshot 4](img/4.png)
-![Screenshot 5](img/5.png)
-![Screenshot 6](img/6.png)
